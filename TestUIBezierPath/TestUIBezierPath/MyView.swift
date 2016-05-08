@@ -124,7 +124,8 @@ class MyView: UIView {
         aPath.addLineToPoint(CGPointMake(150, 150))
         aPath.closePath()
         aPath.lineWidth = 5.0 // 线条宽度
-        aPath.fill() // Draws line 根据坐标点连线，填充
+//        aPath.fill() // Draws line 根据坐标点连线，填充
+        aPath.fillWithBlendMode(CGBlendMode.Normal, alpha: 0.5)
         
         finishAngle += M_PI/20 // 更新终点
     }
