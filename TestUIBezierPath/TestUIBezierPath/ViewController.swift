@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let myView = MyView.init(frame: CGRectZero)
+    let myView = MyView(frame: CGRectZero)
     var timer: NSTimer!
     
     override func viewDidLoad() {

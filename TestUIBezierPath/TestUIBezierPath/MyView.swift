@@ -27,9 +27,9 @@ class MyView: UIView {
 //        let aPath = UIBezierPath()
 //    
 //        aPath.lineWidth = 5.0 // 线条宽度
-//        aPath.lineCapStyle = CGLineCap.Round // 线条拐角
-//        aPath.lineJoinStyle = CGLineJoin.Round // 终点处理
-//        
+//        aPath.lineCapStyle = .Round // 线条拐角
+//        aPath.lineJoinStyle = .Round // 终点处理
+//
 //        // Set the starting point of the shape.
 //        aPath.moveToPoint(CGPointMake(100, 10))
 //        
@@ -51,13 +51,13 @@ class MyView: UIView {
 //        let color = UIColor.redColor()
 //        color.set() // 设置线条颜色
 //        
-//        let aPath = UIBezierPath.init(rect: CGRectMake(40, 40, 100, 50)) // 长方形
-////        let aPath = UIBezierPath.init(rect: CGRectMake(40, 40, 100, 100)) // 正方形
+//        let aPath = UIBezierPath(rect: CGRectMake(40, 40, 100, 50)) // 长方形
+////        let aPath = UIBezierPath(rect: CGRectMake(40, 40, 100, 100)) // 正方形
 //
 //        aPath.lineWidth = 5.0 // 线条宽度
-//        aPath.lineCapStyle = CGLineCap.Round // 线条拐角
-//        aPath.lineJoinStyle = CGLineJoin.Round // 终点处理
-//        
+//        aPath.lineCapStyle = .Round // 线条拐角
+//        aPath.lineJoinStyle = .Round // 终点处理
+//
 //        aPath.stroke() // Draws line 根据坐标点连线，不填充
 ////        aPath.fill() // Draws line 根据坐标点连线，填充
 //    }
@@ -70,8 +70,8 @@ class MyView: UIView {
 //        color.set() // 设置线条颜色
 //        
 //        // 根据传人的矩形画出内切圆／椭圆
-////        let aPath = UIBezierPath.init(ovalInRect: CGRectMake(40, 40, 100, 100)) // 如果传入的是正方形，画出的就是内切圆
-//        let aPath = UIBezierPath.init(ovalInRect: CGRectMake(40, 40, 100, 160)) // 如果传入的是长方形，画出的就是内切椭圆
+////        let aPath = UIBezierPath(ovalInRect: CGRectMake(40, 40, 100, 100)) // 如果传入的是正方形，画出的就是内切圆
+//        let aPath = UIBezierPath(ovalInRect: CGRectMake(40, 40, 100, 160)) // 如果传入的是长方形，画出的就是内切椭圆
 //        
 //        aPath.lineWidth = 5.0 // 线条宽度
 //        
@@ -86,7 +86,7 @@ class MyView: UIView {
 //        let color = UIColor.redColor()
 //        color.set() // 设置线条颜色
 //        
-//        let aPath = UIBezierPath.init(arcCenter: CGPointMake(150, 150), radius: 75, startAngle: 0, endAngle: (CGFloat)(90*M_PI/180), clockwise: true)
+//        let aPath = UIBezierPath(arcCenter: CGPointMake(150, 150), radius: 75, startAngle: 0, endAngle: (CGFloat)(90*M_PI/180), clockwise: true)
 //        
 //        aPath.lineWidth = 5.0 // 线条宽度
 //        
@@ -101,7 +101,7 @@ class MyView: UIView {
 //        let color = UIColor.redColor()
 //        color.set() // 设置线条颜色
 //        
-//        let aPath = UIBezierPath.init(arcCenter: CGPointMake(150, 150), radius: 75, startAngle: 0, endAngle: (CGFloat)(90*M_PI/180), clockwise: true)
+//        let aPath = UIBezierPath(arcCenter: CGPointMake(150, 150), radius: 75, startAngle: 0, endAngle: (CGFloat)(90*M_PI/180), clockwise: true)
 //        aPath.addLineToPoint(CGPointMake(150, 150))
 //        aPath.closePath()
 //        aPath.lineWidth = 5.0 // 线条宽度
@@ -120,12 +120,12 @@ class MyView: UIView {
         let color = UIColor.whiteColor()
         color.set() // 设置线条颜色
         
-        let aPath = UIBezierPath.init(arcCenter: CGPointMake(150, 150), radius: 75, startAngle: (CGFloat)(beginAngle), endAngle: (CGFloat)(finishAngle), clockwise: true)
+        let aPath = UIBezierPath(arcCenter: CGPointMake(150, 150), radius: 75, startAngle: (CGFloat)(beginAngle), endAngle: (CGFloat)(finishAngle), clockwise: true)
         aPath.addLineToPoint(CGPointMake(150, 150))
         aPath.closePath()
         aPath.lineWidth = 5.0 // 线条宽度
 //        aPath.fill() // Draws line 根据坐标点连线，填充
-        aPath.fillWithBlendMode(CGBlendMode.Normal, alpha: 0.5)
+        aPath.fillWithBlendMode(.Normal, alpha: 0.5)
         
         finishAngle += M_PI/20 // 更新终点
     }
